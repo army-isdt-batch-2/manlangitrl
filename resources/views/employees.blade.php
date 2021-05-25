@@ -1,6 +1,6 @@
 
 @extends('layouts.main')
-@section('title','Employees')
+@section('title','Employees test')
 @section('body')
 @php $active = 'employees'  @endphp
   <div class="row align-items-center"> 
