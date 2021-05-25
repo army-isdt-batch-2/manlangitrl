@@ -11,10 +11,11 @@ class CreateTimekeepingTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up() 
     {
         Schema::create('timekeeping', function (Blueprint $table) {
             $table->id();
+            // commit
             $table->date('date');
             $table->timestamps();
         });
