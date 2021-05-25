@@ -13,8 +13,11 @@
                            Payslip
                         </h4>
                     </div>
-                    <div class="col-2 text-end"> 
+                    <div class="col-1 text-end"> 
                         <a href="/payslips/create" class="btn btn-primary pull-right">Create</a>
+                    </div> 
+                    <div class="col-1 text-end"> 
+                        <a href="/payslip/view" class="btn btn-primary  pull-right">View</a>
                     </div> 
                     <div class="col-12">
                         <hr>    

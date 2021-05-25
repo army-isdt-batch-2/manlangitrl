@@ -18,4 +18,11 @@ class PayslipController extends Controller
              return view('create.payslip');
  
       }
+
+      public function view()
+      {
+  
+              return view('view.payslip');
+  
+       }
 }

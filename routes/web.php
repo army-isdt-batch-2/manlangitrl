@@ -100,6 +100,10 @@ Route::get('/timekeeping/create', [
     App\Http\Controllers\TimeKeepingController::class,
     'create'
 ]);
+Route::get('/timekeeping/view', [
+    App\Http\Controllers\TimeKeepingController::class,
+    'timeview'
+]);
 //END  TIME KEEPING FUNCTIONS
 
 // PAYSLIPS FUNCTIONS
@@ -110,6 +114,10 @@ Route::get('/payslips', [
 Route::get('/payslips/create', [
     App\Http\Controllers\PayslipController::class,
     'create'
+]);
+Route::get('/payslip/view', [
+    App\Http\Controllers\PayslipController::class,
+    'view'
 ]);
 // END PAYSLIPS FUNCTIONS
 

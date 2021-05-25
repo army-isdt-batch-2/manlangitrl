@@ -18,4 +18,11 @@ class TimeKeepingController extends Controller
              return view('create.timekeeping');
  
       }
+
+      public function timeview()
+      {
+  
+              return view('view.timekeeping');
+  
+       }
 }
