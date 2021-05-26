@@ -17,7 +17,10 @@ class CreateTimekeepingTable extends Migration
             $table->id();
             // commit
             $table->date('date');
+            $table->softDeletes();
+
             $table->timestamps();
+            
         });
     }
 

@@ -6,7 +6,6 @@
     <div class="col-12 mt-5">
         <div class="card">
             <div class="card-body row p-5">
-
                 <div class="col-10">
                     <h4>
                         Departments
@@ -35,13 +34,17 @@
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
-                        <tbody <tr>
-                            <td>1</td>
-                            <td>None</td>
-                            <td>None</td>
-                            <td>None</td>
-                            <td>None</td>
+                        <tbody> 
+                           @foreach($data as $x)
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">{{  $x->department}}</th>
+                                <th scope="col">{{  $x->created_at}}</th>
+                                <th scope="col">{{  $x->updated_at}}</th>
+                                <th scope="col"></th>
                             </tr>
+                           @endforeach
+                           
                         </tbody>
                     </table>
                 </div>

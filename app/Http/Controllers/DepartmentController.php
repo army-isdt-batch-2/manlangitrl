@@ -15,8 +15,11 @@ class DepartmentController extends Controller
 
     public function index()
     {
+         $data=Department::orderby('id','DESC')->get();
 
-            return view('departments');
+         return view('departments')->with([
+                'data'=>$data
+                        ]);
 
      }
 
@@ -34,7 +37,7 @@ class DepartmentController extends Controller
         Department::create(
                 $this->request->except('_token')
             );
-         return Redirect::route('departments');
+         return Redirect::route('departments')->with('success','Department successfully added.');
 
  
       }

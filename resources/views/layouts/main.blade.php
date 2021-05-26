@@ -22,6 +22,8 @@
 <div class="col-3"></div>
 <div class="col-9  content">
 <!-- SET Dashboard-->
+@include('components.flash')
+
 @yield('body')
 </div>
 </div>
