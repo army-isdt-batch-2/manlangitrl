@@ -14,7 +14,7 @@ class CreatePayslipsRecordsTable extends Migration
     public function up()
     {
         Schema::create('payslips_records', function (Blueprint $table) {
-            $table->id();
+            $table->id();     
             $table->unsignedBigInteger('employee_id')->index();
             $table->unsignedBigInteger('payslip_id')->index();
             $table->longText('data');
