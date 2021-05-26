@@ -10,9 +10,14 @@ class PayslipRecord extends Model
 {
     use HasFactory,SoftDeletes;;
 
-    protected $table = "";
+    protected $table = "payslips_records";
 
     protected $fillable = [
-        
+            'employee_id',
+            'payslip_id',
+            'data',
+            'created_at',
+            'updated_at',
+            'deleted_at'     
     ];
 }

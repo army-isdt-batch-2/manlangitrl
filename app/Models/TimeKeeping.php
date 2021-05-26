@@ -10,9 +10,13 @@ class TimeKeeping extends Model
 {
     use HasFactory,SoftDeletes;;
 
-    protected $table = "";
+    protected $table = "timekeeping";
 
     protected $fillable = [
-        
-    ];
+            'date',
+            'created_at',
+            'updated_at',
+            'deleted_at'
+
+             ];
 }

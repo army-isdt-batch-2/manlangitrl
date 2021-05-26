@@ -10,9 +10,14 @@ class Payslip extends Model
 {
     use HasFactory,SoftDeletes;;
 
-    protected $table = "";
+    protected $table = "payslips";
 
     protected $fillable = [
+        'cutoff_start',
+        'cutoff_end',
+        'created_at',
+        'updated_at',
+        'deleted_at' 
         
     ];
 }

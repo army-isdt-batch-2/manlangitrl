@@ -28,6 +28,9 @@ class Employee extends Model
         'ph_id',
         'pi_id',
         'tax_id',
+        'created_at',
+        'updated_at',
+        'deleted_at'  
         
     ];
 }
