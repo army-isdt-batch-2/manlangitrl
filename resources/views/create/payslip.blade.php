@@ -17,15 +17,15 @@
                         <hr>    
                     </div>
                     <div class="col-12">
-                            <form class="row g-3">
-                    
+                            <form action="/payslips/save" method="post" class="row g-3">
+                            @csrf
                             <div class="col-md-6">
                                 <label for="inputZip" class="form-label">Cut-off start</label>
-                                <input type="date" class="form-control" id="inputZip">
+                                <input type="date" class="form-control" name="cutoff_start" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="inputZip" class="form-label">Cut-off end</label>
-                                <input type="date" class="form-control" id="inputZip">
+                                <input type="date" class="form-control" name="cutoff_end" required>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary">Save</button>

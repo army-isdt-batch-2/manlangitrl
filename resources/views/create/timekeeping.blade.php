@@ -19,11 +19,11 @@
                     </div>
 
                     <div class="col-12">
-                            <form class="row g-3">
-                    
+                            <form action="/timekeeping/save" method="post" class="row g-3">
+                            @csrf
                             <div class="col-md-6">
                                 <label for="inputZip" class="form-label">Attendance Date</label>
-                                <input type="date" class="form-control" id="inputZip">
+                                <input type="date" class="form-control" name="date" required>
                             </div>
                             
                             <div class="col-12">

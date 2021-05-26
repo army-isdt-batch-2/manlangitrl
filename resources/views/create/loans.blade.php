@@ -19,41 +19,41 @@
                     </div>
 
                         <div class="col-12">
-                            <form class="row g-3">
-                           
+                            <form action="/loans/create" method="post" class="row g-3">
+                            @csrf
                             <div class="col-md-4">
                                 <label for="inputPassword4" class="form-label">Employee ID</label>
-                                <input type="text" class="form-control" id="inputPassword4">
+                                <input type="text" class="form-control" name="employee_id" required>
                             </div>
                             <div class="col-md-4">
                                 <label for="inputPassword4" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="inputPassword4">
+                                <input type="text" class="form-control" name="fullname" required>
                             </div>
                             <div class="col-md-4">
                                 <label for="inputPassword4" class="form-label">Designation</label>
-                                <input type="text" class="form-control" id="inputPassword4">
+                                <input type="text" class="form-control" name="designation" required>
                             </div>
                             <div class="col-md-4">
                             <div class="col-md-12">
                                 <label for="inputState" class="form-label">Loan  Type</label>
-                                <select id="inputState" class="form-select">
+                                <select name="loan_type" class="form-select" required>
                                 <option selected>Choose...</option>
                                 <option>...</option>
                                 </select>
                             </div>
                             <div class="col-md-12">
                                 <label for="inputPassword4" class="form-label">Loan Amout</label>
-                                <input type="number" class="form-control" id="inputPassword4">
+                                <input type="number" class="form-control" name="amount" required>
                             </div>
                             <div class="col-md-12">
                                 <label for="inputPassword4" class="form-label">Months Payable</label>
-                                <input type="number" class="form-control" id="inputPassword4">
+                                <input type="number" class="form-control" name="months_payable" required>
                             </div>
                             </div>
                             <div class="col-md-8">
                             <div class="col-md-12">
                                 <label for="inputCity" class="form-label">Notes</label>
-                                <textarea type="text" class="form-control" id="inputCity" rows="7"></textarea>
+                                <textarea type="text" class="form-control" name="notes" rows="7" required></textarea>
                             </div>
                             </div>
                         

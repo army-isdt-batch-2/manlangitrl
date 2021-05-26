@@ -13,7 +13,7 @@ class CreateEmployeesTable extends Migration
      */
     public function up()
     {
-        Schema::create('employees', function (Blueprint $table) {
+        Schema::create(' ', function (Blueprint $table) {
             $table->id();
             $table->binary('photo');
             $table->string('first_name');
@@ -34,6 +34,8 @@ class CreateEmployeesTable extends Migration
 
 
             $table->timestamps();
+            $table->softDeletes();
+
             $table->foreign('department_id')->references('id')->on('department');
             $table->foreign('sss_id')->references('id')->on('deductions');
             $table->foreign('ph_id')->references('id')->on('deductions');
