@@ -22,6 +22,8 @@ class CreateLoansTable extends Migration
             $table->longText('notes');
 
             $table->timestamps();
+            $table->softDeletes();
+
             $table->foreign('employee_id')->references('id')->on('employees');  
         
         });

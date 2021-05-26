@@ -18,11 +18,11 @@
                 </div>
 
                 <div class="col-12">
-                    <form class="row g-3">
-
+                    <form action="/departments/create" method="post" class="row g-3">
+                        @csrf
                         <div class="col-md-6">
                             <label for="name" class="form-label">Department</label>
-                            <input type="text" class="form-control" id="inputname" required>
+                            <input type="text" class="form-control" name="department" required>
                         </div>
 
 

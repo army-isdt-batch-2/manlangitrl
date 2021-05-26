@@ -18,6 +18,7 @@
                     </div> 
 
                     <div class="col-12">
+                    <form action="/timekeeping/view/save" method="post" class="row g-3">
                         <table class="table mt-3">
                             <thead>
                                 <tr>
@@ -41,10 +42,10 @@
                                         <small>Juan delacruz</small>
                                     </th>
                                     <td>
-                                        <input type="time" class="form-control">
+                                        <input type="time" class="form-control" name="clockin" required>
                                     </td>
                                     <td>
-                                        <input type="time" class="form-control">
+                                        <input type="time" class="form-control" name="clockout" required>
                                     </td>
                                     <td>0hrs</td>
                                     <td>0hrs</td>
@@ -59,6 +60,7 @@
                                 </tr>  
                             </tbody>
                         </table>
+                        </form>
                     </div>
                 </div>
             </div>
