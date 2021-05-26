@@ -34,6 +34,11 @@ Route::get('/departments/create', [
     'create'
 ])->name('departments.create');
 
+Route::post('/departments/create/save', [
+    App\Http\Controllers\DepartmentController::class,
+    'save'
+])->name('departments.create.save');
+
 // EMPLOYEE FUNCTIONS
 Route::get('/employees', [
     App\Http\Controllers\EmployeeController::class,
