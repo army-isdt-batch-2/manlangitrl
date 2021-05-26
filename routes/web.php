@@ -125,8 +125,3 @@ Route::get('/settings', [
     App\Http\Controllers\SettingController::class,
     'index'
 ]);
-
-Route::get('/form', [
-    App\Http\Controllers\loginController::class,
-    'form'
-]);
