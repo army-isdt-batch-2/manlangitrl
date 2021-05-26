@@ -19,6 +19,8 @@ class CreatePayslipsRecordsTable extends Migration
             $table->unsignedBigInteger('payslip_id')->index();
             $table->longText('data');
             $table->timestamps();
+            $table->softDeletes();
+
             $table->foreign('employee_id')->references('id')->on('employees');  
             $table->foreign('payslip_id')->references('id')->on('payslips');  
 

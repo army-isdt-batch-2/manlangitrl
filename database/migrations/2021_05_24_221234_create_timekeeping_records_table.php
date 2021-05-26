@@ -21,6 +21,8 @@ class CreateTimekeepingRecordsTable extends Migration
             $table->unsignedBigInteger('timekeeping_id')->index();
 
             $table->timestamps();
+            $table->softDeletes();
+
             $table->foreign('employee_id')->references('id')->on('employees');  
             $table->foreign('timekeeping_id')->references('id')->on('timekeeping');  
 
