@@ -9,7 +9,7 @@
 
                 <div class="col-10">
                     <h4>
-                        Create Department
+                       Update Department
                     </h4>
                 </div>
 
@@ -18,13 +18,14 @@
                 </div>
 
                 <div class="col-12">
-                    <form action="{{route('departments.create.save')}}" method="post" class="row g-3">
+                    <form action="{{ route('departments.update',$department->id) }}" method="post" class="row g-3" >
                         @csrf
+                        <!-- @method('put') -->
                         <div class="col-md-6">
                             <label for="name" class="form-label">Department</label>
-                            <input type="text" class="form-control" name="department" required>
+                            <input type="text" class="form-control" name="department" value="{{$department->department }}"required>
                         </div>
-
+ 
 
                         <div class="col-12">
                             <button type="submit" class="btn btn-primary">Save</button>

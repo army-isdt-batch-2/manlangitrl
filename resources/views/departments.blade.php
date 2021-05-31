@@ -34,17 +34,25 @@
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
-                        <tbody> 
-                           @foreach($data as $x)
+                        <tbody>
+                            @foreach($data as $key=> $x)
                             <tr>
-                                <th scope="col">#</th>
+                                <th scope="col">{{++$key}}</th>
                                 <th scope="col">{{  $x->department}}</th>
                                 <th scope="col">{{  $x->created_at}}</th>
                                 <th scope="col">{{  $x->updated_at}}</th>
-                                <th scope="col"></th>
+                                <th scope="col">
+                                    <form action="{{ route('departments.delete',$x->id) }}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <a type="button" href="{{ route('departments.edit',$x->id) }}" class="btn btn-success btn-sm">Edit</a>
+                                        <button type="button" class="btn btn-danger  btn-sm" onclick="confirm('{{ __("Are you sure you want to delete this?") }}') ? this.parentElement.submit() : ''">Delete</button>
+                         
+                                    </form>
+                                </th>
                             </tr>
-                           @endforeach
-                           
+                            @endforeach
+
                         </tbody>
                     </table>
                 </div>
